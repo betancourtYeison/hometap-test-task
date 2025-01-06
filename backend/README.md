@@ -2,6 +2,8 @@
 
 ## Running Locally
 
+Before start. Ensure you are in backend folder
+
 Create a new virtualenv
 
     python3: -m venv .venv
