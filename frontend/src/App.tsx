@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import hometapLogo from "./assets/hometap.svg";
 import "./App.css";
 
+import { Loader, Toast } from "./components";
+
 function App() {
-  const { isPending, error, data } = useQuery({
+  const { isPending, error } = useQuery({
     queryKey: ["provider"],
     queryFn: async () => {
       const apiUrl = import.meta.env.VITE_API_URL;
@@ -16,19 +18,26 @@ function App() {
     },
   });
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   useEffect(() => {
-    console.log("data", data);
-  }, [data]);
-
-  if (isPending) return "Loading...";
-
-  if (error) return "An error has occurred: " + error.message;
+    if (error) setErrorMessage(error.message);
+  }, [error]);
 
   return (
     <>
+      {isPending && <Loader />}
+      {errorMessage && (
+        <Toast
+          type="error"
+          duration={10}
+          message={errorMessage}
+          onClose={() => setErrorMessage("")}
+        />
+      )}
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+        <a href="https://www.hometap.com" target="_blank">
+          <img src={hometapLogo} className="logo" alt="Hometap logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
