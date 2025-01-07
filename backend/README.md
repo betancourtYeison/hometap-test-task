@@ -48,3 +48,6 @@ Add permission to test file
 You can now run the test, to do so you can do the following:
 
     ./test.sh
+    
+<img width="1278" alt="Screenshot 2025-01-07 at 10 38 50 AM" src="https://github.com/user-attachments/assets/fb3051dd-2781-457e-a286-be326c82a230" />
+
