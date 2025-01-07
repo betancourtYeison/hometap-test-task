@@ -4,10 +4,10 @@ import reactLogo from "./assets/react.svg";
 import hometapLogo from "./assets/hometap.svg";
 import "./App.css";
 
-import { Loader, Toast } from "./components";
+import { DataTable, Loader, Toast } from "./components";
 
 function App() {
-  const { isPending, error } = useQuery({
+  const { isPending, error, data } = useQuery({
     queryKey: ["provider"],
     queryFn: async () => {
       const apiUrl = import.meta.env.VITE_API_URL;
@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     if (error) setErrorMessage(error.message);
-  }, [error]);
+  }, [error, data]);
 
   return (
     <>
@@ -43,15 +43,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="card">{data && <DataTable data={data.providers} />}</div>
+      <p className="read-the-docs">Developed by Yeison Betancourt Solis</p>
     </>
   );
 }
