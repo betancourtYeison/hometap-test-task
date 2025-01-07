@@ -15,7 +15,7 @@ function App() {
     queryKey: ["provider", address],
     queryFn: async () => {
       const apiUrl = import.meta.env.VITE_API_URL;
-      const url = `${apiUrl}/api/providers?address=123 Main St, Anytown, USA`;
+      const url = `${apiUrl}/api/providers?address=${address}`;
       const response = await fetch(url);
       const data = await response.json();
       return data;
