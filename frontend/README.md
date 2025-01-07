@@ -25,3 +25,5 @@ Go to http://localhost:5173/ to ensure app is working:
 You can now run the test, to do so you can do the following:
 
     npm run test
+    
+<img width="1282" alt="Screenshot 2025-01-07 at 10 39 23 AM" src="https://github.com/user-attachments/assets/a944cf29-d1a6-4178-b5a7-0882577eb2d0" />
