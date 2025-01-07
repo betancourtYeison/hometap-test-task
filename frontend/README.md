@@ -1,5 +1,9 @@
 # React + TypeScript + Vite
 
+## Requirements
+
+- Node 23
+
 ## Running Locally
 
 Before start. Ensure you are in frontend folder

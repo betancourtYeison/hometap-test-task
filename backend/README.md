@@ -1,5 +1,10 @@
 # Flask
 
+## Requirements
+
+- Python3
+- virtualenv (Optional)
+
 ## Running Locally
 
 Before start. Ensure you are in backend folder
