@@ -6,9 +6,9 @@ Before start. Ensure you are in backend folder
 
 Create a new virtualenv
 
-    python3: -m venv .venv
+    python3 -m venv .venv
     or
-    virtualenv: ~/.virtualenvs/venv
+    virtualenv ~/.virtualenvs/venv
 
 Now activate the virtualenv and install the project requirements
 
