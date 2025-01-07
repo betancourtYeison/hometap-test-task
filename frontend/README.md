@@ -12,4 +12,4 @@ Now run server
 
     npm run dev
 
-Go to http://localhost:5173/ to ensure app is working:
+Go to http://localhost:5173/ to ensure app is working

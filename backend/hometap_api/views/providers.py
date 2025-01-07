@@ -22,7 +22,7 @@ def parse_provider_data(data, provider_name):
             '6 Bathrooms': data.get('bathrooms'),
             '7 Room Count': data.get('features', {}).get('roomCount'),
             '8 Septic System': data.get('features', {}).get('septicSystem'),
-            '9 Sale Price': "${:.3f}".format(data.get('lastSalePrice') / 1000) if data.get('lastSalePrice') is not None else None,
+            '9 Sale Price': "${:.3f}".format(data.get('lastSalePrice') / 1000) if data.get('lastSalePrice') is not None else None
         },
         'provider_2': {
             '1 Square Footage': "{:.3f}".format(data.get('SquareFootage') / 1000) if data.get('SquareFootage') is not None else None,
@@ -33,7 +33,7 @@ def parse_provider_data(data, provider_name):
             '6 Bathrooms': data.get('Bathrooms'),
             '7 Room Count': data.get('RoomCount'),
             '8 Septic System': data.get('SepticSystem'),
-            '9 Sale Price': "${:.3f}".format(data.get('LastSalePrice') / 1000) if data.get('LastSalePrice') is not None else None,
+            '9 Sale Price': "${:.3f}".format(data.get('LastSalePrice') / 1000) if data.get('LastSalePrice') is not None else None
         }
     }
     return parsed.get(provider_name, {})
