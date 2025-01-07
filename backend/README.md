@@ -23,7 +23,7 @@ Now activate the virtualenv and install the project requirements
 
     pip install -r requirements.txt
 
-Add permission to file
+Add permission to run file
 
     chmod +x run.sh
 
@@ -38,3 +38,13 @@ Go to http://127.0.0.1:5000/api/status to ensure app is working:
   "message": "hometap API is working"
 }
 ```
+
+## Running tests
+
+Add permission to test file
+
+    chmod +x test.sh
+
+You can now run the test, to do so you can do the following:
+
+    ./test.sh

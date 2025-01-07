@@ -1,6 +1,7 @@
 # BACKEND
 
 __pycache__/
+backend/.coverage
 
 # FRONTEND
 
